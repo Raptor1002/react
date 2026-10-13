@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #0056b3;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+}
+
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* User List Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.user-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.user-card h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+.user-card p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+.view-details-btn {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.view-details-btn:hover {
+  background-color: #004494;
+}
+
+/* User Details Card */
+.user-details-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.details-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--bg-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.details-header h2 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.badge {
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.detail-item strong {
+  width: 120px;
+  color: var(--text-light);
+}
+
+.back-btn {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* States */
+.loader, .error-message, .not-found-container {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.not-found-container h2 {
+  color: #dc3545;
+}
