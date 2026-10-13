@@ -16,7 +16,7 @@ const Login = ({ onLogin }) => {
   return (
     <div className="auth-container">
       <h2>Welcome to the Employee Portal</h2>
-      <p>Please log in to view the directory.</p>
+      <p>Please log in hgg to view the directory.</p>
       <button className="btn btn-primary" onClick={onLogin}>
         Log In
       </button>
